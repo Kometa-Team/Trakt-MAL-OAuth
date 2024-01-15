@@ -33,13 +33,9 @@
                         <input type="text" class="form-control" id="trakt_client_secret" name="trakt_client_secret" required>
                     </div>
 
-                    <div class="form-group">
-                        <input type="checkbox" id="toggleField" name="toggleField" onchange="togglePINURL()">
-                        <label for="toggleField">I need a Trakt PIN</label>
-                    </div>
-
-                    <div class="form-group" id="urlField" style="display: none;">
+                    <div class="form-group" id="urlField">
                         When you click "Retrieve PIN" below, you will be taken to a Trakt web page.  Log in and allow your application access to your Trakt account.  Trakt will display a PIN.  Copy that PIN and paste it into the "Trakt PIN" field below.<br><br>
+                        If you have a PIN you generated in the last few minutes, enter it below.
                         <input type="hidden" class="form-control" id="trakt_url" name="trakt_url" readonly oninput="checkURLStart(this)">
                         <button type="button" class="btn btn-primary mt-2" id="trakt_open_url" onclick="openUrl()">Retrieve PIN</button>
                     </div>
