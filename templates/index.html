@@ -38,11 +38,10 @@
                         <label for="toggleField">I need a Trakt PIN</label>
                     </div>
 
-                    When you click "Open URL" below, you will be taken to a Trakt web page.  Log in and allow your application access to your Trakt account.  Trakt will display a PIN.  Copy that PIN and paste it into the "Trakt PIN" field below.<br><br>
                     <div class="form-group" id="urlField" style="display: none;">
-                        <label for="trakt_url">URL:</label>
-                        <input type="text" class="form-control" id="trakt_url" name="trakt_url" readonly oninput="checkURLStart(this)">
-                        <button type="button" class="btn btn-primary mt-2" id="trakt_open_url" onclick="openUrl()">Open URL</button>
+                        When you click "Retrieve PIN" below, you will be taken to a Trakt web page.  Log in and allow your application access to your Trakt account.  Trakt will display a PIN.  Copy that PIN and paste it into the "Trakt PIN" field below.<br><br>
+                        <input type="hidden" class="form-control" id="trakt_url" name="trakt_url" readonly oninput="checkURLStart(this)">
+                        <button type="button" class="btn btn-primary mt-2" id="trakt_open_url" onclick="openUrl()">Retrieve PIN</button>
                     </div>
 
                     <!-- Existing form groups for input1 and input2 -->
@@ -69,11 +68,10 @@
                         <input type="text" class="form-control" id="mal_client_secret" name="mal_client_secret" required>
                     </div>
 
-                    When you click "Open URL" below, you will be taken to a MyAnimeList web page.  Log in and click the Allow option.  You will be redirected to a localhost URL that will not load. Copy that localhost URL and paste it into the "MyAnimeList Localhost URL" field below.<br><br>
+                    When you click "Authenticate with MyAnimeList" below, you will be taken to a MyAnimeList web page.  Log in and click the Allow option.  You will be redirected to a localhost URL that will not load. Copy that localhost URL and paste it into the "MyAnimeList Localhost URL" field below.<br><br>
                     <div class="form-group">
-                        <label for="mal_url">MyAnimeList URL (Auto-updated):</label>
-                        <input type="text" class="form-control" id="mal_url" name="mal_url" readonly>
-                        <button type="button" class="btn btn-primary mt-2" id="mal_open_url" onclick="openMALUrl()">Open URL</button>
+                        <input type="hidden" class="form-control" id="mal_url" name="mal_url" readonly>
+                        <button type="button" class="btn btn-primary mt-2" id="mal_open_url" onclick="openMALUrl()">Authenticate with MyAnimeList</button>
                     </div>
 
                     <div class="form-group">
@@ -179,11 +177,13 @@
 
         // Call autoResize on page load for the result textarea
         window.onload = function() {
-            var resultTextarea = document.getElementById('result');
-            var urlTextarea = document.getElementById('trakt_url');
-            autoResize(resultTextarea);
-            checkContentStart(resultTextarea);
-            checkURLStart(urlTextarea);
+            var result_text = document.getElementById('result');
+            var trakt_url_text = document.getElementById('trakt_url');
+            var mal_url_text = document.getElementById('mal_url');
+            autoResize(result_text);
+            checkContentStart(result_text);
+            checkURLStart(trakt_url_text);
+            checkMALURLStart(mal_url_text)
         };
         
     </script>
