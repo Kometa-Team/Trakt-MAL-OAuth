@@ -26,5 +26,5 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12 #
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: pmm-auth
+          heroku_app_name: kometa-auth
           heroku_email: chaz@chazlarson.com
