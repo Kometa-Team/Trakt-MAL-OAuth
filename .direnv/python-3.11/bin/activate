@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/Chaz.Larson/dev/github/PMM_Auth/.direnv/python-3.11"
+VIRTUAL_ENV="/Users/Chaz.Larson/dev/github/Kometa_Auth/.direnv/python-3.11"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

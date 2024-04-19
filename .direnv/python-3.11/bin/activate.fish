@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/Chaz.Larson/dev/github/PMM_Auth/.direnv/python-3.11"
+set -gx VIRTUAL_ENV "/Users/Chaz.Larson/dev/github/Kometa_Auth/.direnv/python-3.11"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

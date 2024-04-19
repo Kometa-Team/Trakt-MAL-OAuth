@@ -7,7 +7,16 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+.idea
+.vscode
 .Python
+/test*
+logs/
+config/*
+!config/overlays/
+config/overlays/*/
+config/overlays/temp.png
+!config/*.template
 build/
 develop-eggs/
 dist/
@@ -20,6 +29,7 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
@@ -127,6 +137,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+pmm-venv/
+kometa-venv/
 
 # Spyder project settings
 .spyderproject

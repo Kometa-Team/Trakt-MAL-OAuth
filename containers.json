@@ -1,6 +1,6 @@
 {
     "flask": {
-        "image": ":pmm-auth-service.pmm-auth-container.1",
+        "image": ":kometa-auth-service.kometa-auth-container.1",
         "ports": {
             "5000": "HTTP"
         }
